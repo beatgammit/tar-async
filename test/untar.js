@@ -2,14 +2,20 @@
 	'use strict';
 
 	var fs = require('fs'),
-		untar = require('../lib/untar');
+		Untar = require('../lib/untar'),
+		untar = new Untar(function (err, header, fileStream) {
+			if (err) {
+				return;
+			}
 
-	untar(fs.createReadStream('./out.tar'), function (err, header, filedata) {
-		if (err) {
-			return;
-		}
+			console.log(header.fileName);
+			fileStream.on('data', function (data) {
+				console.log(data.toString());
+			});
+			fileStream.on('end', function () {
+				console.log('end of file');
+			});
+		});
 
-		console.log(header.fileName);
-		console.log(filedata.toString());
-	});
+	fs.createReadStream('./out.tar').pipe(untar);
 }());
