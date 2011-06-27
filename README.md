@@ -12,7 +12,7 @@ Example
 
 Tar:
 
-	var Tar = require('tar-async/tar'), // or require('tar-async').Tar
+	var Tar = require('tar-async'), // or require('tar-async').Tar or require('tar-async/tar')
 		tape = new Tar({output: require('fs').createWriteStream('out.tar')});
 	
 	tape.append('test.txt', 'Woohoo!! Tar me up Scotty!', function () {

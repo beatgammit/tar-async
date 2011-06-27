@@ -2,8 +2,8 @@
 	"author": "T. Jameson Little <t.jameson.little@gmail.com>",
 	"name": "tar-async",
 	"description": "Asynchronous tar and untar",
-	"keywords": ["tar", "asynchronous", "stream", "async"],
-	"version": "1.0.0",
+	"keywords": ["tar", "untar", "asynchronous", "stream", "async", "chunk", "chunked"],
+	"version": "1.0.1",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/beatgammit/tar-async.git"

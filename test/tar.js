@@ -3,7 +3,7 @@
 	'use strict';
 
 	var fs = require('fs'),
-		Tar = require('tar-async/tar'),
+		Tar = require('tar-async'), // or require('tar-async').Tar or require('tar-async/tar')
 		tape,
 		contents,
 		stats;
