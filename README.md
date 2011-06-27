@@ -26,7 +26,7 @@ Untar:
 	var Untar = require('lib/untar'),
 		fs = require('fs'),
 		untar = new Untar(function (err, header, fileStream) {
-			console.log(header.fileName);
+			console.log(header.filename);
 			fileStream.on('data', function (data) {
 				console.log(data.toString());
 			});
@@ -74,4 +74,4 @@ Untar(opts, callback)
 * callback- callback each time a record is read; parameters are
   * err- only used when checksums don't match
   * header- header data (see `header.js` for details
-  * fileStream- Readable Stream; file contents will be emitted
+  * fileStream- Readable Stream; chunks will be emitted as Buffer objects

@@ -8,12 +8,12 @@
 				return;
 			}
 
-			console.log(header.fileName);
+			console.log(header.filename);
 			fileStream.on('data', function (data) {
 				console.log(data.toString());
 			});
 			fileStream.on('end', function () {
-				console.log('end of file');
+				// whatever...
 			});
 		});
 
