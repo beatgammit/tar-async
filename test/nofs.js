@@ -1,8 +1,9 @@
+#!/usr/bin/env node
 (function () {
 	'use strict';
 
 	var fs = require('fs'),
-		Tar = require('../lib/tar'),
+		Tar = require('../lib/index').Tar,
 		tape,
 		contents,
 		stats;

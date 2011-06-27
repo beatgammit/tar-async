@@ -12,7 +12,7 @@ Example
 
 Tar:
 
-	var Tar = require('tar-async'),
+	var Tar = require('tar-async').Tar,
 		tape = new Tar({output: require('fs').createWriteStream('out.tar')});
 	
 	tape.append('test.txt', 'Woohoo!! Tar me up Scotty!', function () {
@@ -23,7 +23,7 @@ Simple huh? A Tar instance is an EventEmitter, and emits these events: 'end', 'd
 
 Untar:
 
-	var Untar = require('lib/untar'),
+	var Untar = require('tar-async').Untar,
 		fs = require('fs'),
 		untar = new Untar(function (err, header, fileStream) {
 			console.log(header.filename);
