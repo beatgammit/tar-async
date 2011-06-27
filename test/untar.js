@@ -3,7 +3,7 @@
 	'use strict';
 
 	var fs = require('fs'),
-		Untar = require('../lib/index').Untar,
+		Untar = require('tar-async/untar'),
 		untar = new Untar(function (err, header, fileStream) {
 			if (err) {
 				return;
