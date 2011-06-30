@@ -72,14 +72,14 @@ Untar(opts, callback)
 
 * opts
   * fileTypes- if not defined, defaults to normal and contiguous files; these are the options (any single one or an array of multiple ones)
-    * 'normal'- normal file
-	* 'hard-link'- hard link
-	* 'symbolic-link'- symbolic link
-	* 'character-special'- device files that moves data by characters; this type of file usually has a majorNumber and minorNumber
-	* 'block-special'- device files that moves data in blocks; this type of file usually has a majorNumber and minorNumber
-	* 'directory'- directory
-	* 'fifo'- named pipe; doesn't have data
-	* 'contiguous-file'- same as file, but it's allocated contiguously on disk
+      * 'normal'- normal file
+      * 'hard-link'- hard link
+      * 'symbolic-link'- symbolic link
+      * 'character-special'- device files that moves data by characters; this type of file usually has a majorNumber and minorNumber
+      * 'block-special'- device files that moves data in blocks; this type of file usually has a majorNumber and minorNumber
+      * 'directory'- directory
+      * 'fifo'- named pipe; doesn't have data
+      * 'contiguous-file'- same as file, but it's allocated contiguously on disk
 * callback- callback each time a record is read; parameters are
   * err- only used when checksums don't match
   * header- header data (see `header.js` for details
