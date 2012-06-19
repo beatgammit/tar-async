@@ -52,6 +52,7 @@ Supported options include:
 * consolidate- default false; whether to consolidate everything into a single directory
 * normalize- default true; whether to normalize each file's path
 * output- default null; writable stream to stream output to
+* allowPipe- default false; allow Stream.pipe (this will cache the stream to get the size)
 
 Tar.append(filepath, input, opts, callback):
 

@@ -18,10 +18,7 @@
 
 				console.log('File:', file);
 
-				fs.stat(fullPath, function (err, stats) {
-					stats.mode = parseInt('664', 8);
-					tape.append(file, fs.createReadStream(fullPath), stats, next);
-				});
+				tape.append(file, fs.createReadStream(fullPath), {allowPipe: true}, next);
 			}).then(function () {
 				tape.close();
 				cb(tape);
